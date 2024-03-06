@@ -79,3 +79,6 @@ export async function createNewInvitation(agent: Agent) {
 - Read more: [SSI:Self-Sovereign Identity Decentralized digital identity and verifiable credentials (Alex Preukschat, Drummond Reed)](https://www.manning.com/books/self-sovereign-identity)
 
 ![The primary roles involved with exchange of verifiable credentials](Image/The%20primary%20roles%20involved%20with%20exchange%20of%20verifiable%20credentials.png)
+- Read more: [Electron process](https://electron-vite.org/electron-processes.png)
+
+![Electron](Image/electron-processes.png)
