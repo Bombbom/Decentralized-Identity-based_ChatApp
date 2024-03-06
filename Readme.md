@@ -39,6 +39,38 @@
 ## Mediator
 
 - Mediator: Use ACA-py to build a mediator as an intermediate connection between agents without endpoints (mobile agents).
+- Mediator demo: run mediator.sh and access to localhost:11000 
+![Mediator Demo](Image/Mediator-Demo.png)
+- Usage
+  - Create a new connection invitation (Agent to Agent)
+![Create](Image/create-connection-url-mediator.png)
+![Result](Image/Result-create-connection-url-mediator.png)
+
+  - Use connection invitation url in code
+```typescript
+const agent = new Agent({
+        config,
+        dependencies: agentDependencies,
+        modules:{
+            mediationRecipient: new MediationRecipientModule({
+                mediatorInvitationUrl, // connection invitation url 
+            }),
+        //...
+        }
+        //...
+        })
+
+// Agent create a invitation connection Url 
+export async function createNewInvitation(agent: Agent) {
+    const outOfBandRecord = await agent.oob.createInvitation();
+    return {
+      invitationUrl: outOfBandRecord.outOfBandInvitation.toUrl({
+        domain: "ws://127.0.0.1:8000/",
+      }),
+      outOfBandRecord,
+    };
+};
+```
 
 ## References
 - Read more: [AnonCreds Specification](https://hyperledger.github.io/anoncreds-spec/)
