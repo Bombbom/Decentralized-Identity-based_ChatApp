@@ -40,7 +40,9 @@
 
 - Mediator: Use ACA-py to build a mediator as an intermediate connection between agents without endpoints (mobile agents).
 - Mediator demo: run mediator.sh and access to localhost:11000 
-![Mediator Demo](Image/Mediator-Demo.png)
+  
+![Mediator Demo](Image/Mediator-demo.png)
+
 - Usage
   - Create a new connection invitation (Agent to Agent)
 ![Create](Image/create-connection-url-mediator.png)
