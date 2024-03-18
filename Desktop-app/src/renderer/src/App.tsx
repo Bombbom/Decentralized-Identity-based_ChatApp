@@ -1,6 +1,7 @@
 import Versions from './components/Versions'
 import electronLogo from './assets/electron.svg'
 
+// export default Button;
 function App(): JSX.Element {
   const ipcHandle = (): void => window.electron.ipcRenderer.send('ping')
 
